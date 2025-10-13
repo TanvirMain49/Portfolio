@@ -4,7 +4,7 @@ import Loader from "./Loader";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 
 function Earth() {
-  const earth = useGLTF("../../public/models/planet/scene.glb");
+ const earth = useGLTF("/models/planet/scene.glb");
 
   return <primitive object={earth?.scene} scale={2.5} position-y={0} rotation-y={0} />;
 }
