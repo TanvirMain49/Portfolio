@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { images } from "../Constant/image";
 import Card from "../Components/Card";
 import { Globe } from "../Components/globe";
