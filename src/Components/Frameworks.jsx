@@ -11,7 +11,6 @@ export function Frameworks() {
     "microsoft",
     "react",
     "tailwindcss",
-    "java"
   ];
   return (
     <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
