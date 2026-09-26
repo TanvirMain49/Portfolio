@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { Menu, X } from "lucide-react";
 
 const navigationItems = [
   { href: "#home", label: "Home"},

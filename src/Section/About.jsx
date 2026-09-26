@@ -17,7 +17,7 @@ function About() {
           <img
             src={images.Person}
             alt="coding"
-            className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-6 md:inset-y-3 lg:scale-[1.5]"
+            className="absolute inset-0 h-full w-full object-cover object-[center_65%] md:object-top"
           />
           <div className="z-10">
             <p className="headtext">Hi, I'm Mahinul Tanvir Mahin</p>
