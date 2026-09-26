@@ -85,11 +85,15 @@ body {
 }
 
 .nav-li {
-  @apply text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+  @apply text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md max-sm:transition-colors max-sm:hover:bg-white/5 py-2 max-sm:px-5;
 }
 
 .nav-link {
-  @apply text-lg md:text-base hover:text-white transition-colors;
+  @apply inline-flex items-center justify-center gap-3 text-lg md:text-base hover:text-white transition-colors;
+}
+
+.nav-icon {
+  @apply size-5 shrink-0 text-aqua transition-colors;
 }
 /* Button Components */
 .btn {

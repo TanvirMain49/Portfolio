@@ -13,10 +13,10 @@ export default function Project({ project, setPreview }) {
         onMouseLeave={() => setPreview(null)}
       >
         <div>
-          <p className="text-2xl">{project.title}</p>
-          <div className="flex gap-5 mt-2 text-sand">
+          <p className="text-lg sm:text-xl md:text-2xl">{project.title}</p>
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-5 mt-2 text-xs sm:text-sm md:text-base text-sand">
             {project.tags.map((tag) => (
-              <span key={tag.id}>{tag.name}</span>
+              <span key={tag.name}>{tag.name}</span>
             ))}
           </div>
         </div>

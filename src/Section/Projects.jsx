@@ -21,11 +21,12 @@ export default function Projects() {
     <section
       id="work"
       onMouseMove={handleMouseMove}
-      className="relative c-space section-spacing mb-[584px] md:mb-0"
+      className="relative c-space mt-20 md:mt-28 mb-10 md:mb-16"
     >
       <p className="subtext mb-2">Showcase Highlights</p>
       <h2 className="text-heading">My Selected Projects</h2>
-      <div className="bg-gradient-to-r from-transparent via-neutral-700 t0-transparent mt-12 h-[1px] w-full">
+      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
+      <div>
         {myProjects.map((project) => (
           <Project key={project.id} project={project} setPreview={setPreview} />
         ))}
@@ -33,7 +34,7 @@ export default function Projects() {
       {preview && (
         <motion.img
           src={preview}
-          className="fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80"
+          className="fixed top-0 left-0 z-50 object-cover rounded-lg shadow-lg pointer-events-none h-40 w-60 sm:h-48 sm:w-72 md:h-56 md:w-80"
           style={{ x: springX, y: springY }}
         />
       )}

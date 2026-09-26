@@ -58,7 +58,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-20 overflow-hidden section-spacing c-space`}
+      className="mt-20 md:mt-0 flex xl:flex-row flex-col-reverse c-space mb-20 overflow-x-clip"
     >
       <motion.div
         variants={{
@@ -79,7 +79,7 @@ const Contact = () => {
         }}
         initial="hidden"
         whileInView="show"
-        className="flex-1 flex flex-col items-center justify-center max-w-md p-5 mx-auto rounded-2xl bg-primary shadow-md"
+        className="min-w-0 flex-1 flex flex-col items-center justify-center max-w-md p-5 mx-auto rounded-2xl bg-primary shadow-md xl:max-w-none"
       >
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let's Talk</h2>
@@ -166,7 +166,7 @@ const Contact = () => {
         }}
         initial="hidden"
         whileInView="show"
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className="min-w-0 xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
       </motion.div>

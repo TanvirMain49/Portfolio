@@ -33,7 +33,7 @@ const ExperienceCard = ({experience})=>{
                 key={index}
                 className="text-white-100 text-sm pl-1 tracking-wider"
                 >
-                  {point}
+                {point}
                 </li>
             ))}
         </ul>
@@ -43,7 +43,7 @@ const ExperienceCard = ({experience})=>{
 
 export default function Experience() {
   return (
-    <section id="experience" className="c-space section-spacing mt-20 md:mt-28 mb-48">
+        <section id="experience" className="c-space mt-20 md:mt-28">
         <h2 className="subtext mb-2">What I have done so far</h2>
         <h2 className="text-heading">Work Experience.</h2>
 
