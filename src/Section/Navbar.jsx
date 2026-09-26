@@ -1,14 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { BriefcaseBusiness, FolderKanban, Home, Mail, Menu, UserRound, X } from "lucide-react";
 
 const navigationItems = [
-  { href: "#home", label: "Home", Icon: Home },
-  { href: "#about", label: "About", Icon: UserRound },
-  { href: "#experience", label: "Experience", Icon: BriefcaseBusiness },
-  { href: "#work", label: "Work", Icon: FolderKanban },
-  { href: "#contact", label: "Contact", Icon: Mail },
+  { href: "#home", label: "Home"},
+  { href: "#about", label: "About"},
+  { href: "#experience", label: "Experience"},
+  { href: "#work", label: "Work"},
+  { href: "#contact", label: "Contact"},
 ];
 
 function Navigation({ showIcons = false }) {
@@ -17,7 +16,6 @@ function Navigation({ showIcons = false }) {
       {navigationItems.map(({ href, label, Icon }) => (
         <li key={href} className="nav-li">
           <a href={href} className="nav-link">
-            {showIcons && <Icon aria-hidden="true" className="nav-icon" />}
             <span>{label}</span>
           </a>
         </li>
