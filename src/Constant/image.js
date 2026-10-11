@@ -1,9 +1,14 @@
 import close from "../assets/close.svg";
 import mountain3 from "../assets/mountain-3.webp";
+import mountain3Mobile from "../assets/mountain-3-mobile.webp";
 import planets from "../assets/planets.webp";
+import planetsMobile from "../assets/planets-mobile.webp";
 import mountain2 from "../assets/mountain-2.webp";
+import mountain2Mobile from "../assets/mountain-2-mobile.webp";
 import mountain1 from "../assets/mountains4.webp";
+import mountain1Mobile from "../assets/mountains4-mobile.webp";
 import blueSky from "../assets/blueSky.webp";
+import blueSkyMobile from "../assets/blueSky-mobile.webp";
 import copyEmail from "../assets/copy.svg";
 import copyDone from "../assets/copy-done.svg";
 import arrowRight from "../assets/arrow-right.svg";
@@ -25,12 +30,17 @@ import Framer from "../assets/logos/framer-motion.svg"
 export const images = {
     close,
     mountain3,
+    mountain3Mobile,
     planets,
+    planetsMobile,
     mountain2,
+    mountain2Mobile,
     Gemini,
     Framer,
     mountain1,
+    mountain1Mobile,
     blueSky,
+    blueSkyMobile,
     copyEmail,
     copyDone,
     GreenSock,

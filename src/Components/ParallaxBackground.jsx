@@ -2,8 +2,10 @@
 import React from 'react'
 import { images } from '../Constant/image'
 import { motion, useScroll, useSpring, useTransform } from 'motion/react'
+import { useMediaQuery } from 'react-responsive'
 
 export default function ParallaxBackground() {
+const isMobile = useMediaQuery({ maxWidth: 853 });
 
 // Track scroll progress (0 to 1)
 const { scrollYProgress } = useScroll();
@@ -42,7 +44,7 @@ const mountain1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
         {/* background sky */}
         <div className='absolute inset-0 w-full h-screen -z-50'
         style={{
-          backgroundImage: `url(${images.blueSky})`,
+          backgroundImage: `url(${isMobile ? images.blueSkyMobile : images.blueSky})`,
           backgroundPosition: "bottom",
           backgroundSize: "cover"
         }}
@@ -51,7 +53,7 @@ const mountain1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
         {/* Mountain layer 3 */}
         <motion.div className='absolute inset-0 -z-40'
         style={{
-          backgroundImage: `url(${images.mountain3})`,
+          backgroundImage: `url(${isMobile ? images.mountain3Mobile : images.mountain3})`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: mountain3Y
@@ -61,7 +63,7 @@ const mountain1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
         {/* Planets */}
          <motion.div className='absolute inset-0 -z-30'
         style={{
-          backgroundImage: `url(${images.planets})`,
+          backgroundImage: `url(${isMobile ? images.planetsMobile : images.planets})`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           x: planetsX,
@@ -71,7 +73,7 @@ const mountain1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
         {/* Mountain layer 2 */}
          <motion.div className='absolute inset-0 -z-20'
         style={{
-          backgroundImage: `url(${images.mountain2})`,
+          backgroundImage: `url(${isMobile ? images.mountain2Mobile : images.mountain2})`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: mountain2Y
@@ -81,7 +83,7 @@ const mountain1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
         {/* Mountain layer 1 */}
          <motion.div className='absolute inset-0 -z-10'
         style={{
-          backgroundImage: `url(${images.mountain1})`,
+          backgroundImage: `url(${isMobile ? images.mountain1Mobile : images.mountain1})`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: mountain1Y,
