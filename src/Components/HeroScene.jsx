@@ -5,9 +5,14 @@ import { Float } from "@react-three/drei";
 import { easing } from "maath";
 import Loader from "./Loader";
 
-export default function HeroScene({ isMobile }) {
+export default function HeroScene({ isMobile, inView }) {
   return (
-    <Canvas camera={{ position: [0, 1, 3] }}>
+    <Canvas
+      camera={{ position: [0, 1, 3] }}
+      frameloop={inView ? "always" : "never"}
+      dpr={[1, 1.5]}
+      gl={{ antialias: !isMobile }}
+    >
       <Suspense fallback={<Loader />}>
         <Float>
           <Astronaut

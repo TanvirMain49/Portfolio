@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import HeroText from "../Components/HeroText";
 import ParallaxBackground from "../Components/ParallaxBackground";
 import { useMediaQuery } from "react-responsive";
@@ -8,16 +8,34 @@ const HeroScene = lazy(() => import("../Components/HeroScene"));
 
 export default function Hero() {
   const isMobile = useMediaQuery({ maxWidth: 853 });
+  const figureRef = useRef(null);
+  const [inView, setInView] = useState(true);
+
+  useEffect(() => {
+    if (!figureRef.current) {
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(figureRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="home" className="flex items-start justify-center md:items-start md:justify-start min-h-screen overflow-hidden c-space">
       <HeroText />
       <ParallaxBackground />
       <figure
+        ref={figureRef}
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
       >
         <Suspense fallback={<Loader />}>
-          <HeroScene isMobile={isMobile} />
+          <HeroScene isMobile={isMobile} inView={inView} />
         </Suspense>
       </figure>
     </section>

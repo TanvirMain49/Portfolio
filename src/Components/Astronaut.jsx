@@ -26,11 +26,16 @@ export function Astronaut(props) {
   const targetY = props.position?.[1] ?? -1;
   const yPosition = useMotionValue(targetY + 6);
   const ySpring = useSpring(yPosition, { damping: 30 });
+  const lastY = useRef(ySpring.get());
   useEffect(() => {
     ySpring.set(targetY);
   }, [ySpring, targetY]);
   useFrame(() => {
-    group.current.position.y = ySpring.get();
+    const currentY = ySpring.get();
+    if (Math.abs(currentY - targetY) > 0.001 || Math.abs(currentY - lastY.current) > 0.001) {
+      group.current.position.y = currentY;
+      lastY.current = currentY;
+    }
   });
   return (
     <group
