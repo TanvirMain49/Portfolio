@@ -26,7 +26,7 @@ export default function Project({ project, setPreview }) {
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           Read More
-          <img src={images.arrowRight} alt="arrow right" className="w-5" />
+          <img src={images.arrowRight} alt="arrow right" loading="lazy" decoding="async" fetchPriority="low" width={20} height={20} className="w-5" />
         </button>
       </div>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />

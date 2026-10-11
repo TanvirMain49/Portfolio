@@ -42,7 +42,7 @@ const mountain1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
         {/* background sky */}
         <div className='absolute inset-0 w-full h-screen -z-50'
         style={{
-          backgroundImage: `url(${images.stars})`,
+          backgroundImage: `url(${images.blueSky})`,
           backgroundPosition: "bottom",
           backgroundSize: "cover"
         }}

@@ -59,6 +59,11 @@ const Icon = ({ skill }) => {
     <img
       src={skill.src}
       alt={skill.name}
+      loading="lazy"
+      decoding="async"
+      fetchPriority="low"
+      width={40}
+      height={40}
       className="size-full rounded-sm object-contain transition-transform duration-200 hover:scale-110"
     />
   );

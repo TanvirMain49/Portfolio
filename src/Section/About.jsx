@@ -17,6 +17,11 @@ function About() {
           <img
             src={images.Person}
             alt="coding"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            width={1280}
+            height={720}
             className="absolute inset-0 h-full w-full object-cover object-[center_65%] md:object-top"
           />
           <div className="z-10">

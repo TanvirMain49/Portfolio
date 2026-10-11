@@ -34,6 +34,12 @@ export default function Projects() {
       {preview && (
         <motion.img
           src={preview}
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          alt="Project preview"
+          width={320}
+          height={224}
           className="fixed top-0 left-0 z-50 object-cover rounded-lg shadow-lg pointer-events-none h-40 w-60 sm:h-48 sm:w-72 md:h-56 md:w-80"
           style={{ x: springX, y: springY }}
         />

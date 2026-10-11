@@ -7,6 +7,12 @@ export default function Card({ style, text, image, containerRef }) {
     <motion.img
       className="absolute w-15 cursor-grab"
       src={image}
+      alt=""
+      loading="lazy"
+      decoding="async"
+      fetchPriority="low"
+      width={60}
+      height={60}
       style={style}
       whileHover={{ scale: 1.05 }}
       drag

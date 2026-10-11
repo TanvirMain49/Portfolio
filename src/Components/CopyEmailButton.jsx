@@ -31,12 +31,12 @@ export default function CopyEmailButton() {
         >
           {copied ? (
             <>
-              <img src={images.copyDone} alt="copy done" className="w-5" />
+              <img src={images.copyDone} alt="copy done" loading="lazy" decoding="async" fetchPriority="low" width={20} height={20} className="w-5" />
               <span>Email has Copied</span>
             </>
           ) : (
             <>
-              <img src={images.copyEmail} alt="copy icon" className="w-5" />
+              <img src={images.copyEmail} alt="copy icon" loading="lazy" decoding="async" fetchPriority="low" width={20} height={20} className="w-5" />
               <span>Copy Email Address</span>
             </>
           )}

@@ -23,9 +23,9 @@ const ProjectDetails = ({
           aria-label="Close project details"
           className="absolute right-3 top-3 z-10 rounded-sm bg-midnight p-2 hover:bg-gray-500 sm:right-5 sm:top-5"
         >
-          <img src={images.close} alt="" className="size-6" />
+          <img src={images.close} alt="" loading="lazy" decoding="async" fetchPriority="low" width={24} height={24} className="size-6" />
         </button>
-        <img src={image} alt={title} className="w-full rounded-t-2xl" />
+        <img src={image} alt={title} loading="lazy" decoding="async" fetchPriority="low" width={1280} height={720} className="w-full rounded-t-2xl" />
         <div className="p-5">
           <h5 className="mb-2 text-2xl font-bold text-white">{title}</h5>
           <p className="mb-3 font-normal text-neutral-400">{description}</p>
@@ -39,6 +39,11 @@ const ProjectDetails = ({
                   key={`${tag.name}-${tag.id}`}
                   src={tag.path}
                   alt={tag.name}
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                  width={40}
+                  height={40}
                   className="size-8 rounded-lg object-contain hover-animation sm:size-10"
                 />
               ))}
@@ -50,7 +55,7 @@ const ProjectDetails = ({
               className="inline-flex min-h-11 w-fit items-center gap-1 font-medium cursor-pointer hover-animation sm:shrink-0"
             >
               View Project{" "}
-              <img src="assets/arrow-up.svg" alt="" className="size-4" />
+              <img src="assets/arrow-up.svg" alt="" loading="lazy" decoding="async" fetchPriority="low" width={16} height={16} className="size-4" />
             </a>
           </div>
         </div>
