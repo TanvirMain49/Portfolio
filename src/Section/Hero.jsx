@@ -1,12 +1,10 @@
-import React, { Suspense } from "react";
+import { lazy, Suspense } from "react";
 import HeroText from "../Components/HeroText";
 import ParallaxBackground from "../Components/ParallaxBackground";
 import { useMediaQuery } from "react-responsive";
-import { Astronaut } from "../Components/Astronaut";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, OrbitControls } from "@react-three/drei";
-import { easing } from "maath";
 import Loader from "../Components/Loader";
+
+const HeroScene = lazy(() => import("../Components/HeroScene"));
 
 export default function Hero() {
   const isMobile = useMediaQuery({ maxWidth: 853 });
@@ -18,30 +16,10 @@ export default function Hero() {
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
       >
-        <Canvas camera={{ position: [0, 1, 3] }}>
-          <Suspense fallback={<Loader />}>
-
-          <Float>
-            <Astronaut
-              scale={isMobile && 0.23}
-              position={isMobile && [0, -2.1, 0]}
-            />
-            <Rig />
-          </Float>
-          </Suspense>
-        </Canvas>
+        <Suspense fallback={<Loader />}>
+          <HeroScene isMobile={isMobile} />
+        </Suspense>
       </figure>
     </section>
   );
-}
-
-function Rig() {
-  return useFrame((state, delta) => {
-    easing.damp3(
-      state.camera.position,
-      [state.mouse.x / 10, 1 + state.mouse.y / 10, 3],
-      0.5,
-      delta
-    );
-  });
 }
