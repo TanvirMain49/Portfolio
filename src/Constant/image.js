@@ -3,7 +3,7 @@ import mountain3 from "../assets/mountain-3.webp";
 import planets from "../assets/planets.webp";
 import mountain2 from "../assets/mountain-2.webp";
 import mountain1 from "../assets/mountains4.webp";
-import blueSky from "../assets/blueSky.png";
+import blueSky from "../assets/blueSky.webp";
 import copyEmail from "../assets/copy.svg";
 import copyDone from "../assets/copy-done.svg";
 import arrowRight from "../assets/arrow-right.svg";
